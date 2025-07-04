@@ -1,0 +1,206 @@
+/* Variables */
+:root {
+    --primary-color: #4A90E2;
+    --accent-color: #50E3C2;
+    --background-light: #f0f2f5;
+    --background-dark: #121212;
+    --text-light: #2c3e50;
+    --text-dark: #ecf0f1;
+    --card-light: #ffffff;
+    --card-dark: #1E1E1E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--background-light);
+    color: var(--text-light);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+header h1 { font-size: 3em; }
+header p { font-size: 1.2em; margin-top: 10px; }
+
+nav {
+    background: var(--card-light);
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+body.dark-mode nav { background: var(--card-dark); }
+
+nav a {
+    margin: 0 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover { text-decoration: underline; }
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode section {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+p, li { font-size: 1.1em; }
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+body.dark-mode .project-card { background: var(--card-dark); }
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 10px;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn:hover { background: #023e8a; }
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 40px;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 200;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #005ecb;
+    transform: scale(1.1);
+}
+
+.toggle-btn i {
+    font-size: 1.2em;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#skills li {
+    margin-bottom: 10px;
+}
+
+#contact p {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 2em; }
+    nav a { display: block; margin: 10px 0; }
+    .btn { padding: 8px 16px; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Adnane Fallah | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adnane Fallah - Mobile Developer Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body style="text-align: center; font-family: Arial; background: #f0f0f0; padding: 50px;">
-    <h1>👋 I'm Adnane Fallah</h1>
-    <p>Mobile & Web Developer | Passionate about building apps for Android, iOS, and the Web.</p>
-    <a href="https://github.com/adnanefallah" target="_blank">Visit My GitHub</a>
+<body>
+
+<button class="toggle-btn" onclick="toggleMode()">
+    <i class="fas fa-moon"></i>
+</button>
+
+<header>
+    <h1>Adnane Fallah</h1>
+    <p>Mobile Application Developer | Android, iOS (Swift), Flutter | Passionate about Clean Code</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I'm <strong>Adnane Fallah</strong>, a dedicated <strong>Mobile Developer</strong> focusing on Android, iOS, and cross-platform apps.</p>
+    <p>I specialize in <strong>Java</strong>, <strong>Kotlin</strong>, <strong>Swift</strong>, and <strong>Flutter</strong>, building scalable, user-friendly apps with clean architecture.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Task+Manager+App" alt="Task Manager App">
+            <h3>Task Manager App (Android)</h3>
+            <p>Task management app using Kotlin, MVVM architecture, and SQLite for offline data.</p>
+            <div class="btn-container">
+                <a href="https://github.com/adnanefallah/task-manager" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Weather+App" alt="Weather App">
+            <h3>Weather App (Flutter)</h3>
+            <p>Cross-platform weather app built with Flutter and REST APIs for real-time updates.</p>
+            <div class="btn-container">
+                <a href="https://github.com/adnanefallah/weather-app" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=iOS+Notes+App" alt="iOS Notes App">
+            <h3>Notes App (iOS - Swift)</h3>
+            <p>iOS app for note-taking with Swift, CoreData integration, and elegant design.</p>
+            <div class="btn-container">
+                <a href="https://github.com/adnanefallah/ios-notes-app" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Android Development (Java & Kotlin)</li>
+        <li>iOS Development (Swift)</li>
+        <li>Cross-platform with Flutter (Dart)</li>
+        <li>RESTful APIs, Firebase, SQLite</li>
+        <li>UI/UX Design, Clean Code, MVVM Architecture</li>
+        <li>Version Control (Git & GitHub)</li>
+        <li>Languages: Arabic & English</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>I am open to global opportunities. Feel free to reach out:</p>
+    <div class="btn-container">
+        <a href="mailto:adnane@example.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="https://www.linkedin.com/in/adnanefallah" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/adnanefallah" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    &copy; 2025 Adnane Fallah. All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
