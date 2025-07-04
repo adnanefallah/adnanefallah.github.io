@@ -8,8 +8,11 @@
     --text-dark: #ecf0f1;
     --card-light: #ffffff;
     --card-dark: #1E1E1E;
+    --hover-color: #005ecb;
+    --hover-bg-light: rgba(74, 144, 226, 0.1);
 }
 
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,8 +42,13 @@ header {
     animation: fadeIn 1s ease;
 }
 
-header h1 { font-size: 3em; }
-header p { font-size: 1.2em; margin-top: 10px; }
+header h1 {
+    font-size: 3em;
+}
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
 
 nav {
     background: var(--card-light);
@@ -53,7 +61,9 @@ nav {
     transition: background 0.3s;
 }
 
-body.dark-mode nav { background: var(--card-dark); }
+body.dark-mode nav {
+    background: var(--card-dark);
+}
 
 nav a {
     margin: 0 20px;
@@ -61,10 +71,17 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    transition: color 0.3s;
+    transition: color 0.3s, background 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-nav a:hover { text-decoration: underline; }
+nav a:hover,
+nav a:focus {
+    background: var(--hover-bg-light);
+    color: var(--hover-color);
+    outline: none;
+}
 
 .container {
     max-width: 1000px;
@@ -89,7 +106,9 @@ h2 {
     font-size: 2em;
 }
 
-p, li { font-size: 1.1em; }
+p, li {
+    font-size: 1.1em;
+}
 
 .projects {
     display: grid;
@@ -107,11 +126,14 @@ p, li { font-size: 1.1em; }
     animation: fadeInUp 0.8s ease;
 }
 
-body.dark-mode .project-card { background: var(--card-dark); }
+body.dark-mode .project-card {
+    background: var(--card-dark);
+}
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background: rgba(74, 144, 226, 0.05);
 }
 
 .project-card img {
@@ -129,11 +151,16 @@ body.dark-mode .project-card { background: var(--card-dark); }
     border-radius: 25px;
     text-decoration: none;
     margin: 10px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
     text-align: center;
 }
 
-.btn:hover { background: #023e8a; }
+.btn:hover,
+.btn:focus {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    outline: none;
+}
 
 .btn-container {
     display: flex;
@@ -165,9 +192,11 @@ footer {
     transition: transform 0.3s, background 0.3s;
 }
 
-.toggle-btn:hover {
-    background: #005ecb;
+.toggle-btn:hover,
+.toggle-btn:focus {
+    background: var(--hover-color);
     transform: scale(1.1);
+    outline: none;
 }
 
 .toggle-btn i {
@@ -189,18 +218,40 @@ footer {
 }
 
 @media (max-width: 600px) {
-    header h1 { font-size: 2em; }
-    nav a { display: block; margin: 10px 0; }
-    .btn { padding: 8px 16px; }
+    header h1 {
+        font-size: 2em;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .container {
+        padding: 10px;
+    }
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

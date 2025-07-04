@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<button class="toggle-btn" onclick="toggleMode()">
+<!-- Dark Mode Toggle Button -->
+<button class="toggle-btn" onclick="toggleMode()" aria-label="Toggle Dark Mode">
     <i class="fas fa-moon"></i>
 </button>
 
@@ -27,44 +28,55 @@
 
 <div class="container">
 
+<!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
     <p>I'm <strong>Adnane Fallah</strong>, a dedicated <strong>Mobile Developer</strong> focusing on Android, iOS, and cross-platform apps.</p>
     <p>I specialize in <strong>Java</strong>, <strong>Kotlin</strong>, <strong>Swift</strong>, and <strong>Flutter</strong>, building scalable, user-friendly apps with clean architecture.</p>
 </section>
 
+<!-- Projects Section -->
 <section id="projects">
     <h2>My Projects</h2>
     <div class="projects">
+        
         <div class="project-card">
-            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Task+Manager+App" alt="Task Manager App">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Task+Manager+App" alt="Task Manager App Screenshot">
             <h3>Task Manager App (Android)</h3>
             <p>Task management app using Kotlin, MVVM architecture, and SQLite for offline data.</p>
             <div class="btn-container">
-                <a href="https://github.com/adnanefallah/task-manager" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/adnanefallah/task-manager" class="btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
 
         <div class="project-card">
-            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Weather+App" alt="Weather App">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=Weather+App" alt="Weather App Screenshot">
             <h3>Weather App (Flutter)</h3>
             <p>Cross-platform weather app built with Flutter and REST APIs for real-time updates.</p>
             <div class="btn-container">
-                <a href="https://github.com/adnanefallah/weather-app" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/adnanefallah/weather-app" class="btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
 
         <div class="project-card">
-            <img src="https://dummyimage.com/300x200/cccccc/000000&text=iOS+Notes+App" alt="iOS Notes App">
+            <img src="https://dummyimage.com/300x200/cccccc/000000&text=iOS+Notes+App" alt="iOS Notes App Screenshot">
             <h3>Notes App (iOS - Swift)</h3>
             <p>iOS app for note-taking with Swift, CoreData integration, and elegant design.</p>
             <div class="btn-container">
-                <a href="https://github.com/adnanefallah/ios-notes-app" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/adnanefallah/ios-notes-app" class="btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
+
     </div>
 </section>
 
+<!-- Skills Section -->
 <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -78,13 +90,20 @@
     </ul>
 </section>
 
+<!-- Contact Section -->
 <section id="contact">
     <h2>Contact Me</h2>
     <p>I am open to global opportunities. Feel free to reach out:</p>
     <div class="btn-container">
-        <a href="adnane.fallah.dev@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
-        <a href="https://www.linkedin.com/in/adnanefallah" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/adnanefallah" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:adnane.fallah.dev@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/adnanefallah" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/adnanefallah" class="btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> GitHub
+        </a>
     </div>
 </section>
 
